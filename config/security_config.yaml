@@ -1,0 +1,44 @@
+# Security Configuration for Prompt Injection Defense System
+
+# Security levels: strict, balanced, permissive
+security_level: balanced
+
+# Blocking rules - which threats to automatically block
+blocking_rules:
+  direct_injection: true
+  indirect_injection: true
+  jailbreak: true
+  system_prompt_extraction: true
+  unsafe_content: true
+  sensitive_info_leak: true
+  unsafe_output_content: true
+
+# Detection thresholds (0.0 to 1.0)
+detection_thresholds:
+  direct_injection: 0.3
+  indirect_injection: 0.4
+  jailbreak: 0.3
+  system_prompt_extraction: 0.4
+  unsafe_content: 0.5
+
+# Sanitization settings
+sanitization:
+  enabled: true
+  remove_special_chars: true
+  normalize_spaces: true
+  redact_sensitive: true
+  max_prompt_length: 10000
+
+# Logging configuration
+logging:
+  enabled: true
+  log_level: INFO
+  audit_trail: true
+  log_retention_days: 30
+
+# Output validation
+output_validation:
+  enabled: true
+  redact_api_keys: true
+  redact_pii: true
+  redact_system_details: true
