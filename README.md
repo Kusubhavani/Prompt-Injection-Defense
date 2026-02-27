@@ -114,8 +114,11 @@ prompt-injection-defense/
 Follow these steps in order to get the system up and running. Each phase builds upon the previous one, ensuring a smooth setup process.
 
 ### Phase 1: Initial Setup
+```powershell
+git clone https://github.com/Kusubhavani/Prompt-Injection-Defense.git
+cd Prompt-Injection-Defense
 *Set up your Python environment and create a isolated workspace for the project.*
-
+```
 ```powershell
 # 1. Check Python version
 # Verify you have Python 3.8 or higher installed
@@ -269,4 +272,5 @@ For production deployment:
 2. Regularly review threat logs for new attack patterns
 3. Update detection patterns based on emerging threats
 4. Implement log rotation to manage disk space
+
 5. Consider adding rate limiting for additional protection
